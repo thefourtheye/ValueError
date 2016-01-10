@@ -10,6 +10,6 @@ function ValueError(message) {
   }
 }
 
-Object.setPrototypeOf(ValueError.prototype, Error.prototype);
+require('util').inherits(ValueError, Error);
 
 module.exports = ValueError;
