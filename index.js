@@ -1,9 +1,17 @@
 'use strict';
 
 function ValueError(message) {
+
   if (this instanceof ValueError) {
-    this.name = 'ValueError';
-    this.message = message === undefined ? '' : message;
+    Object.defineProperty(this, 'name', {
+      value: 'ValueError',
+      configurable: true
+    });
+    Object.defineProperty(this, 'message', {
+      value: message === undefined ? '' : message,
+      writable: true,
+      configurable: true
+    });
     Error.captureStackTrace(this, ValueError);
   } else {
     return new ValueError(message);
