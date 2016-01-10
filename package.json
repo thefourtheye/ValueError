@@ -4,7 +4,8 @@
   "description": "ValueError, an instance of Error, for Node.js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "node_modules/eslint/bin/eslint.js index.js tests/**/*.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/thefourtheye/ValueError/issues"
   },
-  "homepage": "https://github.com/thefourtheye/ValueError"
+  "homepage": "https://github.com/thefourtheye/ValueError",
+  "devDependencies": {
+    "eslint": "^1.10.3"
+  }
 }
