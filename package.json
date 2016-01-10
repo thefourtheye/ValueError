@@ -1,5 +1,5 @@
 {
-  "name": "ValueError",
+  "name": "valueerror",
   "version": "0.0.1",
   "description": "ValueError, an instance of Error, for Node.js",
   "main": "index.js",

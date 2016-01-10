@@ -9,7 +9,7 @@ ValueError, an instance of Error, for Node.js
 Installation
 ============
 
-    npm install ValueError
+    npm install valueerror
 
 Usage
 =====
@@ -17,7 +17,7 @@ Usage
 Same as the `Error` constructor function. For example,
 
 ```js
-var ValueError = require('ValueError');
+var ValueError = require('valueerror');
 ...
 throw new ValueError('Input cannot have underscores');
 ```
