@@ -1,9 +1,13 @@
 'use strict';
 
 function ValueError(message) {
-  this.name = 'ValueError';
-  this.message = message;
-  Error.captureStackTrace(this, ValueError);
+  if (this instanceof ValueError) {
+    this.name = 'ValueError';
+    this.message = message;
+    Error.captureStackTrace(this, ValueError);
+  } else {
+    return new ValueError(message);
+  }
 }
 
 Object.setPrototypeOf(ValueError.prototype, Error.prototype);
