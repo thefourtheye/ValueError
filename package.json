@@ -24,6 +24,8 @@
   },
   "homepage": "https://github.com/thefourtheye/ValueError",
   "devDependencies": {
-    "eslint": "^1.10.3"
+    "chai": "^3.4.1",
+    "eslint": "^1.10.3",
+    "mocha": "^2.3.4"
   }
 }
