@@ -43,4 +43,19 @@ describe('ValueError should', function() {
       'writable': true
     });
   });
+
+  it('return a ValueError instance without itself in the stack trace when NOT created as constructor', function() {
+    ValueError('Google').stack.split(/\s*\n\s*/).slice(1).forEach(function(line) {
+      // replace all the file name part along with the line and column numbers
+      expect(line.replace(/\/.*:\d+:\d+/, '')).to.not.contain('ValueError');
+    });
+  });
+
+  it('return a ValueError instance without itself in the stack trace when created as constructor', function() {
+    new ValueError('Google').stack.split(/\s*\n\s*/).slice(1).forEach(function(line) {
+      // replace all the file name part along with the line and column numbers
+      expect(line.replace(/\/.*:\d+:\d+/, '')).to.not.contain('ValueError');
+    });
+  });
+
 });
