@@ -1,6 +1,6 @@
 {
   "name": "valueerror",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "ValueError, an instance of Error, for Node.js",
   "main": "index.js",
   "scripts": {
